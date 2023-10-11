@@ -7,24 +7,30 @@ public class Product {
     private double price;
 
     public Product(long id, String name, String category, double price) {
-        super();
-        this.setId(id);
-        this.setName(name);
-        this.setCategory(category);
+        this.id = id;
+        this.name = name;
+        this.category = category;
         this.price = price;
     }
 
-    public long getId() {
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Category: " + category + " Price: " + price;
+    }
+
+    public Long getId() {
         return id;
     }
-    private void setId(long id) {
+
+    public void setId(long id) {
         this.id = id;
     }
 
     public String getName() {
         return name;
     }
-    private void setName(String name) {
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -32,7 +38,7 @@ public class Product {
         return category;
     }
 
-    private void setCategory(String category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -40,19 +46,7 @@ public class Product {
         return price;
     }
 
-    public double setPrice(double price) {
-        return price;
-    }
-
-    public double sconto() {
-        double initial = this.getPrice();
-        double pricediscount = (initial * 10) / 100;
-
-        return pricediscount;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id + " " + "Nome prodotto: " + " " + name + " " + "di categoria: " + category + " " + ", prezzo: " + price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

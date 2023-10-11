@@ -1,4 +1,4 @@
-import app.Product;
+package app;
 
 import java.time.LocalDate;
 

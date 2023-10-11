@@ -1,3 +1,5 @@
+package app;
+
 public class Customer {
     private long id;
     private String name;

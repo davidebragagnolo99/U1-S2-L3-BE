@@ -13,13 +13,32 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Nome: " + name + ", Livello: " + tier;
+        return "ID Cliente: " + id + ", Name Cliente: " + name + ", Tier Cliente: " + tier;
     }
-    public String getCustomer() {
-        return name + tier;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getTier() {
         return tier;
     }
+
+    public void setTier(int tier) {
+        this.tier = tier;
+    }
 }
+
+
